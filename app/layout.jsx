@@ -16,9 +16,9 @@ function RootLayout({ children }) {
                     <div className='gradiant' />
                 </div>
 
-                <div className='app flex flex-col justify-between	 gap-10'>
+                <div className='app flex flex-col justify-between gap-10'>
                     <Header />
-                    <main className='w-full flex-1 h-screen min-h-[50dvw]'>
+                    <main className='w-full flex-1 h-screen min-h-[35dvw]'>
                         <Toaster
                             position='top-center'
                             gutter={12}

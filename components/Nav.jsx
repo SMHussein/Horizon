@@ -10,7 +10,7 @@ function Nav() {
 
     return (
         <nav className='flex-between'>
-            <Link href='/' className='flex gap-2 flex-center'>
+            <Link href='/' className='flex gap-2 flex-center w-[150px] h-[50px]'>
                 <Image
                     src='/assets/images/logo.png'
                     alt='Horizon Logo'
