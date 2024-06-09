@@ -108,7 +108,7 @@ function Form() {
                 )}
             </div>
             <div>
-                <label htmlFor='inquiry' className='block text-sm font-medium text-gray-700'>
+                <label htmlFor='message' className='block text-sm font-medium text-gray-700'>
                     Question or Inquiry
                 </label>
                 <textarea
@@ -117,7 +117,7 @@ function Form() {
                     {...register('message', { required: true })}
                     className='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
                 ></textarea>
-                {errors.inquiry && (
+                {errors.message && (
                     <span className='text-red-500 text-sm'>This field is required</span>
                 )}
             </div>
