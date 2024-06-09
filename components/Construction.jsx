@@ -6,7 +6,7 @@ import construction from '@public/assets/animations/construction.json';
 
 const Construction = () => {
     return (
-        <div className='relative left-10 -top-4 h-[32rem]'>
+        <div className='relative left-10 -top-4 min-h-[300px] sm:min-h-[500px] '>
             <Lottie animationData={construction} loop={true} />
         </div>
     );
