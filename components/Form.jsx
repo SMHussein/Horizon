@@ -73,11 +73,18 @@ function Form() {
                 </label>
                 <input
                     id='phone'
-                    {...register('phone', { required: true })}
+                    type='number'
+                    {...register('phone', {
+                        required: 'Phone number is required',
+                        minLength: {
+                            value: 10,
+                            message: 'Phone number must be at least 10 digits',
+                        },
+                    })}
                     className='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
                 />
                 {errors.phone && (
-                    <span className='text-red-500 text-sm'>This field is required</span>
+                    <span className='text-red-500 text-sm'>{errors.phone.message}</span>
                 )}
             </div>
 
@@ -87,11 +94,17 @@ function Form() {
                 </label>
                 <input
                     id='email'
-                    {...register('email', { required: true })}
+                    {...register('email', {
+                        required: 'Email is required',
+                        pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                            message: 'Invalid email address',
+                        },
+                    })}
                     className='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
                 />
                 {errors.email && (
-                    <span className='text-red-500 text-sm'>This field is required</span>
+                    <span className='text-red-500 text-sm'>{errors.email.message}</span>
                 )}
             </div>
             <div>
