@@ -6,7 +6,7 @@ function Button({ href, type, variation = 'primary', children, isLoading, active
 
     if (variation === 'primary') {
         classes +=
-            'bg-orange-600 rounded-full px-8 py-3 text-white text-xl font-bold flex justify-center gap-2 items-center w-52 hover:bg-orange-700 ';
+            ' mt-8 bg-orange-600 rounded-full px-8 py-3 text-white text-xl font-bold flex justify-center gap-2 items-center w-52 hover:bg-orange-700 ';
     }
 
     if (variation === 'outline') {
@@ -34,7 +34,7 @@ function Button({ href, type, variation = 'primary', children, isLoading, active
             </button>
         );
 
-    return <div className='text-center mt-8'>{element}</div>;
+    return <div className='text-center'>{element}</div>;
 }
 
 export default Button;
