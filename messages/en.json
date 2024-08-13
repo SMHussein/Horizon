@@ -1,0 +1,167 @@
+{
+    "Nav": {
+        "items": [
+            "Home",
+            "About us",
+            "Our Services",
+            "Our Clients",
+            "Choose us",
+            "Quality Standards",
+            "Roles and Requirements",
+            "Training",
+            "Contact us"
+        ],
+
+        "ids": [
+            "hero",
+            "about",
+            "services",
+            "clients",
+            "whyus",
+            "quality",
+            "roles",
+            "training",
+            "contact"
+        ]
+    },
+    "Hero": {
+        "title": "HORIZON Security & Protection",
+        "subTitle": "Integrated Security Solutions for Every Need, we Provide High-Level ​Security Services for Public and Private Facilities."
+    },
+    "AboutUs": {
+        "title": "About us",
+        "textFirst": "Horizon Company for Security, Protection, and Private ​Guarding provides comprehensive security solutions, ​specializing in armed and unarmed protection for public ​and private facilities, institutions, and special events.",
+        "textSecond": "​With all necessary licenses, we ensure reliable and ​effective security services.Our experienced team excels in guarding, personal ​security, and self-defense. We rigorously train our staff ​to meet specific site requirements, ensuring proficiency ​with modern security equipment and technology."
+    },
+    "OurServices": {
+        "title": "Our services",
+        "securityEquipment": {
+            "title": "Security Equipment",
+            "text": "We supply security equipment and provide ​training in its usage and handling."
+        },
+        "siteSecurity": {
+            "title": "Site Security",
+            "text": "Our site security services cover ​construction sites, temporary projects, ​and special events."
+        },
+        "armedUnarmed": {
+            "title": "Armed and Unarmed Security",
+            "text": "We provide armed and unarmed security and ​protection services for all facilities and ​sites."
+        },
+        "securityPlan": {
+            "title": "Security Plan Preparation",
+            "text": "We prepare security plans, including ​evacuation plans for facilities, and offer ​training on their implementation after ​comprehensive site assessments."
+        },
+        "securityConsultancy": {
+            "title": "Security Consultancy",
+            "text": "Our consultancy services cater to various ​sites, including facilities, buildings, ​towers, and both profit and non-profit ​institutions."
+        },
+        "securityTechnology": {
+            "title": "Technology and Security Solutions",
+            "text": "We offer advanced technology and security ​solutions to meet diverse needs."
+        },
+        "securityQualified": {
+            "title": "Qualified Security Personnel",
+            "text": "We supply security personnel trained in using ​a range of security devices, including ​explosive and traditional weapons detection, ​CCTV surveillance, and tracking devices."
+        },
+        "securityControl": {
+            "title": "Control Room Management",
+            "text": "We manage control rooms, provide camera ​surveillance, and handle alarm systems ​with qualified and trained personnel."
+        }
+    },
+    "ourClints": {
+        "title": "our clints"
+    },
+    "whyUs": {
+        "title": "Why Choose Horizon ​Security and Protection?",
+        "experiencedPersonnel": {
+            "title": "Experienced Personnel",
+            "text": "Our team is skilled in personal ​security, self-defense, and the ​latest security technology."
+        },
+        "stateOfArt": {
+            "title": "State-of-the-Art Technology",
+            "text": "We provide modern security ​solutions to ensure a high levelof service."
+        },
+        "qualifiedLeadership": {
+            "title": "Qualified Leadership",
+            "text": "Our management team has long-standing ​experience in the security field, ​ensuring top-tier service delivery."
+        }
+    },
+    "qualityStandards": {
+        "title": "Quality Standards",
+        "subTitle": "Some of the basic standards we adhere to ensure ​the quality of security and protection services",
+        "qualities": [
+            "Rapid Response",
+            "Physical Fitness",
+            "Technology and improvement",
+            "Efficiency Competence and Training",
+            "Compliance with Laws and Regulations",
+            "Continuous Evaluation and Development",
+            "Professional Interaction with the Public",
+            "Maintaining Complete Confidentiality and Privacy for Clients"
+        ]
+    },
+    "rolesAndRequirements": {
+        "title": "Roles and Requirements",
+        "requirementsNote": "Note: Additional qualifications may be required based on site-specific ​needs, as determined by the Human Resources Department.",
+        "shiftSupervisor": {
+            "title": "Site/ Shift Supervisor",
+            "requirements": [
+                "Age not exceeding 45 years",
+                "security experience",
+                "Relevant academic qualification",
+                "High alertness & security sense",
+                "Knowledge of inspections & ​security equipment",
+                "Leadership skills, high ​communication, & report writing ​proficiency"
+            ]
+        },
+        "securityOfficer": {
+            "title": "Security Officer",
+            "requirements": [
+                "Age not exceeding 42 years",
+                "security experience",
+                "Relevant academic qualification",
+                "High alertness & security sense",
+                "Knowledge of inspections & ​security equipment",
+                "Leadership skills, high ​communication, & report writing ​proficiency"
+            ]
+        },
+        "cctvMonitor": {
+            "title": "CCTV Monitor",
+            "requirements": [
+                "Age not exceeding 45 years",
+                "Relevant academic qualification ​for security checkpoints",
+                "Experience in monitoring & site ​order maintenance",
+                "Strong observation, control ​skills, & report writing ​proficiency",
+                "Knowledge of camera systems and ​control room management",
+                "High alertness & strong security ​sense"
+            ]
+        }
+    },
+    "training": {
+        "title": "Training",
+        "subTitle": "Horizon Security and Protection employees undergo various training courses to ensure ​they perform their duties efficiently and effectively. Key training courses include:",
+        "trainingsNote": "These training courses can be customized to meet the specific needs of the workplace.",
+        "trainingsList": [
+            "Basic Security and Protection: Covers fundamental security concepts, risk identification, safety ​procedures, evacuation, and self-defense techniques.",
+            "Comprehensive Inspection: Training on thorough inspection procedures for individuals and vehicles to ​ensure site security.",
+            "Use of Security Equipment: Instruction on using security equipment, including radios, surveillance ​cameras, metal detectors, explosives detectors, handheld inspection tools, and tracking devices.",
+            "Customer and Public Interaction: Training on polite and effective interaction with the public and ​handling dangerous and emergency situations.",
+            "Report Writing: Training on collecting information, analyzing incidents, and writing accurate daily, ​weekly, and monthly security reports.",
+            "First Aid: Basic training on providing first aid in emergencies, such as wounds, fractures, and ​fainting.",
+            "Personal and Environmental Safety: Training on maintaining personal safety, identifying hazards ​(hazardous materials, flammable materials, electrical hazards, fires), and dealing with them.",
+            "Legal and Regulatory Procedures: Training on security-related laws and regulations, privacy ​protection, and correct application."
+        ]
+    },
+    "contactUs": {
+        "title": "contact us",
+        "location": "Our headquarters are located in Amman, at Shaab Roundabout - King Abdullah II Street - Mena ​Complex - 3rd floor. We are led by a team of highly qualified security and administrative ​professionals with extensive experience in the security industry.",
+        "address": "Amm, King Abdullah II St 357,  Amman 11185",
+        "phoneNumber1": "+962 7 7849 0212",
+        "phoneNumber2": "+962 7 9601 6096",
+        "email": "info@horizon-sp.com"
+    },
+    "LocaleSwitcher": {
+        "label": "Select Language",
+        "locale": "{locale,select, ar {Ar} en {En} other {Unknown}}"
+    }
+}

@@ -1,16 +1,14 @@
 import Link from 'next/link';
-import SpinnerMini from './SpinnerMini';
 
 function Button({ href, type, variation = 'primary', children, isLoading, active }) {
-    let classes = 'text-center  transition-all mx-auto ';
+    let classes = 'text-center transition-all min-w-[200px] inline-block py-2 ';
 
     if (variation === 'primary') {
-        classes +=
-            ' mt-8 bg-orange-600 rounded-full px-8 py-3 text-white text-xl font-bold flex justify-center gap-2 items-center w-52 hover:bg-orange-700 ';
+        classes += ' bg-primary-50 text-white hover:bg-primary-100';
     }
 
-    if (variation === 'outline') {
-        classes += 'text-gray-600 hover:text-orange-600 ';
+    if (variation === 'secondary') {
+        classes += ' bg-accent-50 hover:bg-accent-100';
     }
 
     if (active) {
@@ -30,11 +28,10 @@ function Button({ href, type, variation = 'primary', children, isLoading, active
         element = (
             <button type={type} className={classes} disabled={isLoading}>
                 {children}
-                {isLoading && <SpinnerMini />}
             </button>
         );
 
-    return <div className='text-center'>{element}</div>;
+    return element;
 }
 
 export default Button;
