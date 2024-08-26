@@ -7,6 +7,7 @@ import { createClient } from '@/utils/supabase/server';
 const supabase = createClient();
 
 export async function updateContacts(currentState, formData) {
+    const supabase = createClient();
     const phoneNumber1 = formData.get('phoneNumber1');
     const phoneNumber2 = formData.get('phoneNumber2');
     const email = formData.get('email');
@@ -27,6 +28,7 @@ export async function updateContacts(currentState, formData) {
 }
 
 export async function createEditClient(currentState, formData) {
+    const supabase = createClient();
     const name = formData.get('name');
     const image = formData.get('image');
     const editId = formData.get('editId');
@@ -82,6 +84,7 @@ export async function createEditClient(currentState, formData) {
 }
 
 export async function deleteClient(currentState, client) {
+    const supabase = createClient();
     const { id, image } = client;
 
     try {
@@ -133,6 +136,7 @@ export async function archiveClient(currentState, client) {
 }
 
 export async function login(currentState, formData) {
+    const supabase = createClient();
     const data = {
         email: formData.get('email'),
         password: formData.get('password'),
@@ -149,6 +153,7 @@ export async function login(currentState, formData) {
 }
 
 export async function logout(params) {
+    const supabase = createClient();
     const { error } = await supabase.auth.signOut();
 
     if (error) {
