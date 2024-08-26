@@ -35,13 +35,15 @@ function Nav() {
                         isOpen ? 'translate-x-0' : 'translate-x-full xl:translate-x-0'
                     }`}
                 >
-                    <button
-                        className='block px-2 py-4 xl:hidden text-primary-50'
-                        onClick={toggleMenu}
-                    >
-                        <HiMiniXMark className='size-8' />
-                        <span className='sr-only text-4xl'>Close menu modal</span>
-                    </button>
+                    <li>
+                        <button
+                            className='block px-2 py-4 xl:hidden text-primary-100'
+                            onClick={toggleMenu}
+                        >
+                            <HiMiniXMark className='size-8' />
+                            <span className='sr-only text-4xl'>Close menu modal</span>
+                        </button>
+                    </li>
                     <NavItems toggleMenu={toggleMenu} />
                 </ul>
             </nav>

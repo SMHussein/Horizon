@@ -11,7 +11,7 @@ function Services() {
 
     return (
         <Section id='services' classes='background-colored-logo p-8' observe={true}>
-            <Row classes='py-20'>
+            <Row classes='py-12 sm:py-20'>
                 <Heading type={2} classes='mb-12 text-center'>
                     {t('title')}
                 </Heading>

@@ -9,7 +9,7 @@ function Heading({ children, type, classes }) {
     }
 
     if (type === 2) {
-        classNames += ` sm:text-5xl ${lastica.className}`;
+        classNames += ` text-3xl sm:text-5xl ${lastica.className}`;
     }
 
     if (type > 2) {

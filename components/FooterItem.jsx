@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-function FooterItem({ icon, children, alt, text1, text2 }) {
+function FooterItem({ icon, alt, text1, text2 }) {
     return (
         <div className='flex gap-4 justify-center items-center text-xl font-bold'>
             <Image src={icon} alt={alt} width={50} height={50} />

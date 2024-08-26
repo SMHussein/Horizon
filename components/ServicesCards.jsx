@@ -5,7 +5,7 @@ function ServicesCards({ text, title }) {
         <div className='flex flex-col gap-6'>
             <Heading
                 type={3}
-                classes='bg-primary-50 text-white py-2 px-4 font-normal text-lg capitalize'
+                classes='bg-primary-100 text-white py-2 px-4 font-normal text-lg capitalize '
             >
                 {title}
             </Heading>

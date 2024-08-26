@@ -12,10 +12,10 @@ function About() {
     const s = useTranslations('OurServices');
 
     return (
-        <Section id='about' classes='bg-primary-50 text-white'>
+        <Section id='about' classes='bg-primary-100 text-white'>
             <Row classes='flex gap-4'>
-                <div className='w-full py-20'>
-                    <Heading type={2} classes='text-black mb-12'>
+                <div className='w-full py-12 sm:py-20'>
+                    <Heading type={2} classes='mb-12'>
                         {t('title')}
                     </Heading>
                     <p>{t('textFirst')}</p>

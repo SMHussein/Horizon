@@ -13,7 +13,7 @@ export default async function sitemap() {
             url: `${siteUrl}/ar`,
             lastModified,
             changefreq: 'monthly',
-            priority: 1.0,
+            priority: 0.8,
         },
     ];
 }

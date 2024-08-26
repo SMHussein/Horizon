@@ -6,6 +6,7 @@ module.exports = {
         './app/**/*.{js,ts,jsx,tsx,mdx}',
         './sections/**/*.{js,ts,jsx,tsx,mdx}',
         './custom/**/*.{js,ts,jsx,tsx,mdx}',
+        './authentication/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
         extend: {

@@ -1,18 +1,18 @@
-import Link from 'next/link';
+'use client';
 
-function Button({ href, type, variation = 'primary', children, isLoading, active }) {
-    let classes = 'text-center transition-all min-w-[200px] inline-block py-2 ';
+import Link from 'next/link';
+import { useFormStatus } from 'react-dom';
+import SpinnerMini from './SpinnerMini';
+
+function Button({ href, type, variation = 'primary', children, className, onClick }) {
+    let classes = `text-center transition-all min-w-[150px] inline-block py-2 ${className}`;
 
     if (variation === 'primary') {
-        classes += ' bg-primary-50 text-white hover:bg-primary-100';
+        classes += ' bg-primary-100 text-white hover:bg-primary-50';
     }
 
     if (variation === 'secondary') {
-        classes += ' bg-accent-50 hover:bg-accent-100';
-    }
-
-    if (active) {
-        classes += 'active';
+        classes += ' bg-accent-50 hover:bg-accent-100 text-accent-150';
     }
 
     let element = null;
@@ -24,10 +24,19 @@ function Button({ href, type, variation = 'primary', children, isLoading, active
             </Link>
         );
 
+    const { pending } = useFormStatus();
+
     if (!href)
         element = (
-            <button type={type} className={classes} disabled={isLoading}>
+            <button
+                type={type}
+                className={classes}
+                disabled={pending}
+                aria-disabled={pending}
+                onClick={onClick}
+            >
                 {children}
+                {pending && <SpinnerMini />}
             </button>
         );
 

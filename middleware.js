@@ -1,14 +1,45 @@
-import createMiddleware from 'next-intl/middleware';
+import createIntlMiddleware from 'next-intl/middleware';
+import { createServerClient } from '@supabase/ssr';
+import { NextResponse } from 'next/server';
 
-export default createMiddleware({
-    // A list of all locales that are supported
+const handleI18nRouting = createIntlMiddleware({
     locales: ['en', 'ar'],
-
-    // Used when no locale matches
     defaultLocale: 'en',
 });
 
+export async function middleware(request) {
+    const response = handleI18nRouting(request);
+
+    const supabase = createServerClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY, {
+        cookies: {
+            getAll() {
+                return request.cookies.getAll();
+            },
+            setAll(cookiesToSet) {
+                cookiesToSet.forEach(({ name, value, options }) =>
+                    request.cookies.set(name, value)
+                );
+
+                cookiesToSet.forEach(({ name, value, options }) =>
+                    response.cookies.set(name, value, options)
+                );
+            },
+        },
+    });
+    const {
+        data: { user },
+    } = await supabase.auth.getUser();
+
+    if (!user && request.nextUrl.pathname.startsWith('/admin')) {
+        // no user, potentially respond by redirecting the user to the login page
+        const url = request.nextUrl.clone();
+        url.pathname = '/admin';
+        return NextResponse.redirect(url);
+    }
+
+    return response;
+}
+
 export const config = {
-    // Match only internationalized pathnames
     matcher: ['/', '/(en|ar)/:path*'],
 };

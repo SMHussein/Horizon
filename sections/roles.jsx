@@ -13,7 +13,7 @@ function Roles() {
 
     return (
         <Section id='roles' classes='background-colored-logo' observe={true}>
-            <Row classes='py-20'>
+            <Row classes='py-12 sm:py-20'>
                 <Heading type={2} classes='text-center mb-20'>
                     {t('title')}
                 </Heading>

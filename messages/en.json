@@ -56,7 +56,7 @@
             "text": "Our consultancy services cater to various ​sites, including facilities, buildings, ​towers, and both profit and non-profit ​institutions."
         },
         "securityTechnology": {
-            "title": "Technology and Security Solutions",
+            "title": "Tech. and Security Solutions",
             "text": "We offer advanced technology and security ​solutions to meet diverse needs."
         },
         "securityQualified": {
@@ -154,11 +154,7 @@
     },
     "contactUs": {
         "title": "contact us",
-        "location": "Our headquarters are located in Amman, at Shaab Roundabout - King Abdullah II Street - Mena ​Complex - 3rd floor. We are led by a team of highly qualified security and administrative ​professionals with extensive experience in the security industry.",
-        "address": "Amm, King Abdullah II St 357,  Amman 11185",
-        "phoneNumber1": "+962 7 7849 0212",
-        "phoneNumber2": "+962 7 9601 6096",
-        "email": "info@horizon-sp.com"
+        "location": "We are led by a team of highly qualified security and administrative ​professionals with extensive experience in the security industry."
     },
     "LocaleSwitcher": {
         "label": "Select Language",

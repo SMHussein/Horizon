@@ -4,6 +4,7 @@ import Footer from '@sections/Footer';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { anonymousPro } from '@fonts/fonts';
+import { getContacts } from '@utils/services';
 
 export const metadata = {
     title: 'Horizon - Premier Security Services',
@@ -26,13 +27,15 @@ async function RootLayout({ children, params: { locale } }) {
     const messages = await getMessages();
     const direction = locale === 'ar' ? 'rtl' : '';
     const bodyClasses = `${anonymousPro.className} text-accent-150`;
+    const contacts = await getContacts();
+
     return (
         <NextIntlClientProvider messages={messages}>
             <html lang={locale} dir={direction} className='scroll-smooth'>
                 <body className={bodyClasses}>
                     <Header />
                     <main>{children}</main>
-                    <Footer />
+                    <Footer contacts={contacts} />
                 </body>
             </html>
         </NextIntlClientProvider>

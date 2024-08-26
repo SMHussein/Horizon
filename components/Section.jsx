@@ -1,3 +1,5 @@
+'use client';
+
 import useSlideUpObserver from '@custom/useSlideUpObserver';
 
 function Section({ children, classes, id, observe = false }) {
