@@ -24,6 +24,20 @@ export async function getClients() {
     return clients;
 }
 
+export async function getMessages() {
+    const supabase = createClient();
+    let { data: messages, error } = await supabase
+        .from('messages')
+        .select('id,name,phone,email,message,status');
+
+    if (error) {
+        console.error(error);
+        throw new Error(error.message);
+    }
+
+    return messages;
+}
+
 export async function getArchivedClients() {
     const supabase = createClient();
     let { data: clients, error } = await supabase.from('archive').select('id,name,image');

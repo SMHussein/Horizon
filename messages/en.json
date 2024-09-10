@@ -154,10 +154,23 @@
     },
     "contactUs": {
         "title": "contact us",
-        "location": "We are led by a team of highly qualified security and administrative ​professionals with extensive experience in the security industry."
+        "location": "We are led by a team of highly qualified security and administrative ​professionals with extensive experience in the security industry.",
+        "sendUs": "Please leave us a meessage and our team will contact you shortly",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "message": "Message or Inquiry",
+        "send": "Send",
+        "success": "Message sent successfully"
     },
     "LocaleSwitcher": {
         "label": "Select Language",
         "locale": "{locale,select, ar {Ar} en {En} other {Unknown}}"
+    },
+    "validation": {
+        "required": "This field is required",
+        "email": "Please enter a valid email address",
+        "phone": "Please enter a valid phone number",
+        "phoneLength": "Phone number must be at least 10 digits"
     }
 }

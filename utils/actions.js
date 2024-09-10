@@ -4,8 +4,6 @@ import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { createClient } from '@/utils/supabase/server';
 
-const supabase = createClient();
-
 export async function updateContacts(currentState, formData) {
     const supabase = createClient();
     const phoneNumber1 = formData.get('phoneNumber1');
@@ -25,6 +23,24 @@ export async function updateContacts(currentState, formData) {
 
     revalidatePath('/', 'layout');
     return { message: 'Contacts were updated!' };
+}
+
+export async function contactUs(currentState, formData) {
+    const supabase = createClient();
+    const { name, phone, email, message } = formData;
+
+    const { data, error } = await supabase
+        .from('messages')
+        .insert([{ name, phone, email, message, status: 'unread' }])
+        .select();
+
+    if (error) {
+        return { error: 'Something went wrong, please try again later' };
+    }
+
+    const newState = { ...currentState, message: 'Message sent successfully!', id: data[0].id };
+
+    return newState;
 }
 
 export async function createEditClient(currentState, formData) {
@@ -111,6 +127,38 @@ export async function deleteClient(currentState, client) {
 
     revalidatePath('/', 'layout');
     return { success: 'Client deleted successfully!' };
+}
+
+export async function deleteMessage(currentState, id) {
+    const supabase = createClient();
+
+    const { error } = await supabase.from('messages').delete().eq('id', id);
+
+    if (error) {
+        return { error: 'Failed to delete message' };
+    }
+
+    revalidatePath('/admin/messages');
+
+    return { success: 'Message deleted successfully!' };
+}
+
+export async function readMessage(currentState, id) {
+    const supabase = createClient();
+
+    const { data, error } = await supabase
+        .from('messages')
+        .update({ status: 'read' })
+        .eq('id', id)
+        .select();
+
+    if (error) {
+        return { error: 'Failed to update message' };
+    }
+
+    revalidatePath('/admin/messages');
+
+    return { success: 'Message update successfully!' };
 }
 
 export async function archiveClient(currentState, client) {

@@ -6,6 +6,7 @@ import { getMessages } from 'next-intl/server';
 import { anonymousPro } from '@fonts/fonts';
 import { getContacts } from '@utils/services';
 import { getMetadata } from '@utils/helpers';
+import { Toaster } from 'react-hot-toast';
 
 export async function generateMetadata({ params }) {
     const { locale } = params;
@@ -23,7 +24,31 @@ async function RootLayout({ children, params: { locale } }) {
             <html lang={locale} dir={direction} className='scroll-smooth'>
                 <body className={bodyClasses}>
                     <Header />
-                    <main>{children}</main>
+                    <main className='min-h-dvh'>
+                        <Toaster
+                            position='top-center'
+                            gutter={12}
+                            containerStyle={{ margin: '8px' }}
+                            toastOptions={{
+                                success: {
+                                    duration: 5000,
+                                },
+                                error: {
+                                    duration: 5000,
+                                },
+                                style: {
+                                    fontSize: '16px',
+                                    maxWidth: '500px',
+                                    padding: '16px 24px',
+                                    backgroundColor: 'white',
+                                    color: 'color-grey-700',
+                                    textAlign: 'center',
+                                    lineHeight: '1.5',
+                                },
+                            }}
+                        />
+                        {children}
+                    </main>
                     <Footer contacts={contacts} />
                 </body>
             </html>

@@ -1,5 +1,6 @@
 import About from '@sections/about';
 import Clients from '@sections/clients';
+import ContactUs from '@sections/ContactUs';
 import Hero from '@sections/hero';
 import Quality from '@sections/quality';
 import Roles from '@sections/roles';
@@ -21,6 +22,7 @@ async function Home() {
             <Quality />
             <Roles />
             <Training />
+            <ContactUs />
         </>
     );
 }

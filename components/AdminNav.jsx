@@ -11,6 +11,7 @@ const NavLinks = [
     { id: 3, name: 'Contact Info', path: '/admin' },
     { id: 2, name: 'Clients', path: '/admin/clients' },
     { id: 4, name: 'Archive', path: '/admin/archive' },
+    { id: 5, name: 'Messages', path: '/admin/messages' },
 ];
 
 function AdminNav() {

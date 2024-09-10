@@ -1,4 +1,3 @@
-import AddEditClient from '@components/AddEditClient';
 import ClientImage from '@components/ClientImage';
 import Heading from '@components/Heading';
 import { getArchivedClients } from '@utils/services';
@@ -26,7 +25,7 @@ async function page() {
                         />
                     ))
                 ) : (
-                    <p>No clients have be archived yet!</p>
+                    <p className='text-xl'>No clients have been archived yet!</p>
                 )}
             </div>
         </div>
