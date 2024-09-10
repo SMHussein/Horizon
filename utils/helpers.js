@@ -27,6 +27,7 @@ export function getMetadata(locale) {
                 description:
                     'الافق للامن و الحاية - خدمات مثالية لضمان سلامتكم و سلامة منشآتكم من خلال حلول الامن المتخصصة و الحراسة المدربة و مراقبة الكاميرات في عمان، الأردن.',
             },
+            metadataBase: new URL('https://horizon-sp.com'), // Add this line
         };
     }
     return {
@@ -46,5 +47,6 @@ export function getMetadata(locale) {
             description:
                 'Horizon offers comprehensive security services, including trained security guards, CCTV monitoring, and supervision in Amman, Jordan. We ensure your safety with expert facility management and security manpower solutions.',
         },
+        metadataBase: new URL('https://horizon-sp.com'), // Add this line
     };
 }
