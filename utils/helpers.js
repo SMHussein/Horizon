@@ -16,6 +16,10 @@ export function getMetadata(locale) {
                 'الافق للامن و الحماية تقدم حلول أمنية رفيعة المستوى تشمل توفير حراس الأمن، ومراقبة كاميرات وخدمات الإشراف. لتلبية جميع احتياجاتك الأمنية.',
             alternates: {
                 canonical: 'https://horizon-sp.com',
+                languages: {
+                    ar: 'https://horizon-sp.com/ar',
+                    en: 'https://horizon-sp.com/en',
+                },
             },
             author: 'الافق للأمن و الحماية',
             keywords:
@@ -36,6 +40,10 @@ export function getMetadata(locale) {
             "Horizon Security and Protection is a private security and guard company offering comprehensive security solutions to it's clients.",
         alternates: {
             canonical: 'https://horizon-sp.com',
+            languages: {
+                ar: 'https://horizon-sp.com/ar',
+                en: 'https://horizon-sp.com/en',
+            },
         },
         author: 'Horizon Security & Protection',
         keywords:
