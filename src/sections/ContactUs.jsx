@@ -27,7 +27,6 @@ function ContactUs() {
                 </div>
 
                 <p className='text-xl px-12 py-4 text-center'>{t('location')}</p>
-                <p className='text-xl px-12 text-center'>{t('sendUs')}</p>
                 <ContactForm
                     name={t('name')}
                     phone={t('phone')}

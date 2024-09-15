@@ -11,7 +11,7 @@ export function getItems(t, jsonPath) {
 export function getMetadata(locale) {
     if (locale === 'ar') {
         return {
-            title: 'الافق للامن و الحماية',
+            title: 'الافق للامن و الحماية, شركة رائدة في مجال خدمات الأمن والحماية في الأردن',
             description:
                 'الافق للامن و الحماية تقدم حلول أمنية رفيعة المستوى تشمل توفير حراس الأمن، ومراقبة كاميرات وخدمات الإشراف. لتلبية جميع احتياجاتك الأمنية.',
             alternates: {
@@ -35,9 +35,9 @@ export function getMetadata(locale) {
         };
     }
     return {
-        title: 'Horizon - Premier Security & Protection Services',
+        title: 'Horizon Security - Leading Security & Protection Services in Jordan',
         description:
-            "Horizon Security and Protection is a private security and guard company offering comprehensive security solutions to it's clients.",
+            'Horizon Security and Protection is a leading private security company in Jordan, providing tailored security guard services, CCTV monitoring, and consultancy for residential, corporate, and industrial clients. Contact us for the best security solutions in Jordan.',
         alternates: {
             canonical: 'https://horizon-sp.com/en',
             languages: {

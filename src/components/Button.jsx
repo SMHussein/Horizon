@@ -5,7 +5,7 @@ import { useFormStatus } from 'react-dom';
 import SpinnerMini from './SpinnerMini';
 
 function Button({ href, type, variation = 'primary', children, className, onClick }) {
-    let classes = `text-center transition-all min-w-[150px] inline-block py-2 ${className}`;
+    let classes = `text-center transition-all min-w-[150px] inline-block py-2 px-4 ${className}`;
 
     if (variation === 'primary') {
         classes += ' bg-primary-100 text-white hover:bg-primary-50';

@@ -9,7 +9,6 @@ import Row from '@src/components/Row';
 
 function About() {
     const t = useTranslations('AboutUs');
-    const s = useTranslations('OurServices');
 
     return (
         <Section id='about' classes='bg-primary-100 text-white'>
@@ -23,7 +22,7 @@ function About() {
                     <div className='flex gap-12 items-center flex-col sm:flex-row'>
                         <Image src={Logo} width={100} height={115} alt='logo grey' />
                         <Button href='#services' variation='secondary'>
-                            {s('title')}
+                            {t('btnText')}
                         </Button>
                     </div>
                 </div>

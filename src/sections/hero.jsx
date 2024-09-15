@@ -9,7 +9,6 @@ import Row from '@src/components/Row';
 
 function Hero() {
     const t = useTranslations('Hero');
-    const b = useTranslations('AboutUs');
 
     return (
         <Section id='hero' classes='relative'>
@@ -17,7 +16,7 @@ function Hero() {
                 <Image
                     src={CCTV}
                     fill
-                    alt='cctv background image'
+                    alt='CCTV surveillance services in Jordan by Horizon Security'
                     className='object-cover block opacity-30 -z-50'
                 />
                 <Image src={Logo} width={101} height={117} alt='logo' className='mb-16' />
@@ -25,7 +24,7 @@ function Hero() {
                     {t('title')}
                 </Heading>
                 <p className='text-s mb-16'>{t('subTitle')}</p>
-                <Button href='#about'>{b('title')}</Button>
+                <Button href='#contact'>{t('btnText')}</Button>
             </Row>
         </Section>
     );

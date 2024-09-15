@@ -15,14 +15,14 @@ async function Footer({ contacts }) {
         <footer ref={ref} className={footerClasses}>
             <Row classes='py-12 sm:py-20'>
                 <div className='flex items-start lg:justify-around flex-wrap flex-col lg:flex-row gap-8 lg:gap-4'>
-                    <FooterItem alt='location' icon='/assets/icons/location.svg' text1={location} />
+                    <FooterItem alt='location' icon='/assets/icons/location.svg' text={location} />
                     <FooterItem
                         alt='phone'
                         icon='/assets/icons/phone.svg'
-                        text1={phoneNumber1}
-                        text2={phoneNumber2}
+                        phone1={phoneNumber1}
+                        phone2={phoneNumber2}
                     />
-                    <FooterItem alt='email' icon='/assets/icons/email.svg' text1={email} />
+                    <FooterItem alt='email' icon='/assets/icons/email.svg' email={email} />
                 </div>
             </Row>
         </footer>

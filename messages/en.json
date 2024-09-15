@@ -25,16 +25,18 @@
         ]
     },
     "Hero": {
-        "title": "HORIZON Security & Protection",
-        "subTitle": "Integrated Security Solutions for Every Need, we Provide High-Level ​Security Services for Public and Private Facilities."
+        "title": "Comprehensive Security and Protection Services in Jordan",
+        "subTitle": "Horizon Security and Protection provides leading security guard services, CCTV monitoring, and consultancy for public and private facilities in Jordan.",
+        "btnText": "Get a free consultation"
     },
     "AboutUs": {
         "title": "About us",
-        "textFirst": "Horizon Company for Security, Protection, and Private ​Guarding provides comprehensive security solutions, ​specializing in armed and unarmed protection for public ​and private facilities, institutions, and special events.",
-        "textSecond": "​With all necessary licenses, we ensure reliable and ​effective security services.Our experienced team excels in guarding, personal ​security, and self-defense. We rigorously train our staff ​to meet specific site requirements, ensuring proficiency ​with modern security equipment and technology."
+        "textFirst": "Horizon Security and Protection is a trusted private security company in Jordan. We specialize in delivering comprehensive security services, including armed and unarmed security guards, CCTV monitoring, and expert consultancy. Our tailored security solutions serve public, private, and industrial sectors, ensuring top-tier protection for any facility.",
+        "textSecond": "Our team of professionals is equipped with the latest technology and training to guarantee the safety of your property and people. Contact us today to experience the best security services in Jordan.",
+        "btnText": "Explore Our Services"
     },
     "OurServices": {
-        "title": "Our services",
+        "title": "Our Security Services",
         "securityEquipment": {
             "title": "Security Equipment",
             "text": "We supply security equipment and provide ​training in its usage and handling."
@@ -74,16 +76,16 @@
     "whyUs": {
         "title": "Why Choose Horizon ​Security and Protection?",
         "experiencedPersonnel": {
-            "title": "Experienced Personnel",
-            "text": "Our team is skilled in personal ​security, self-defense, and the ​latest security technology."
+            "title": "Expertise & Experience",
+            "text": "With over 20 years of experience in the security industry, Horizon Security and Protection has established itself as one of the top security companies in Jordan. Our expertise spans across multiple industries, from hospitality to large industrial complexes."
         },
         "stateOfArt": {
-            "title": "State-of-the-Art Technology",
-            "text": "We provide modern security ​solutions to ensure a high levelof service."
+            "title": "Tailored Security Solutions",
+            "text": "We offer customized security services based on your specific needs, including residential, corporate, and event security. Every client receives a bespoke security plan designed for their exact requirements."
         },
         "qualifiedLeadership": {
-            "title": "Qualified Leadership",
-            "text": "Our management team has long-standing ​experience in the security field, ​ensuring top-tier service delivery."
+            "title": "Qualified Security Professionals:",
+            "text": "Our highly trained security guards and consultants ensure the highest standards of safety, equipped with the latest technology to safeguard your business or property."
         }
     },
     "qualityStandards": {
@@ -154,8 +156,7 @@
     },
     "contactUs": {
         "title": "contact us",
-        "location": "We are led by a team of highly qualified security and administrative ​professionals with extensive experience in the security industry.",
-        "sendUs": "Please leave us a meessage and our team will contact you shortly",
+        "location": "Get in touch with Horizon Security and Protection today. Our team of highly qualified security and administrative professionals is ready to provide customized security solutions for your business. Whether you need guards, CCTV monitoring, or consultancy services, we’re here to help.",
         "name": "Name",
         "email": "Email",
         "phone": "Phone",
