@@ -7,6 +7,8 @@ import { getMetadata } from '@utils/helpers';
 import { Toaster } from 'react-hot-toast';
 import { routing } from '@src/i18n/routing';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
@@ -48,7 +50,11 @@ async function RootLayout({ children, params: { locale } }) {
                         },
                     }}
                 />
-                <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+                <NextIntlClientProvider messages={messages}>
+                    {children}
+                    <Analytics />
+                    <SpeedInsights />
+                </NextIntlClientProvider>
             </body>
         </html>
     );
