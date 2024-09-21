@@ -196,8 +196,7 @@ export async function login(currentState, formData) {
         return { error: error.message };
     }
 
-    revalidatePath('/', 'layout');
-    redirect('/');
+    redirect('/admin');
 }
 
 export async function logout(params) {
