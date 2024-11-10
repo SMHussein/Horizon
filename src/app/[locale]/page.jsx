@@ -10,8 +10,6 @@ import WhyUs from '@src/sections/whyus';
 import Header from '@src/sections/Header';
 import Footer from '@src/sections/Footer';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { Suspense } from 'react';
-import SpinnerBig from '@src/components/SpinnerBig';
 
 async function Home({ params: { locale } }) {
     unstable_setRequestLocale(locale);
@@ -30,9 +28,7 @@ async function Home({ params: { locale } }) {
                 <Training />
                 <ContactUs />
             </main>
-            <Suspense fallback={<SpinnerBig />}>
-                <Footer />
-            </Suspense>
+            <Footer />
         </>
     );
 }

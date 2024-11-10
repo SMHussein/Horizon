@@ -2,9 +2,7 @@ import ClientsContents from '@src/components/ClientsContents';
 import Heading from '@src/components/Heading';
 import Row from '@src/components/Row';
 import Section from '@src/components/Section';
-import SpinnerBig from '@src/components/SpinnerBig';
 import { useTranslations } from 'next-intl';
-import { Suspense } from 'react';
 
 function Clients() {
     const t = useTranslations('ourClints');
@@ -16,9 +14,7 @@ function Clients() {
                     {t('title')}
                 </Heading>
                 <div className='relative grid gap-20 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-items-center'>
-                    <Suspense fallback={<SpinnerBig />}>
-                        <ClientsContents />
-                    </Suspense>
+                    <ClientsContents />
                 </div>
             </Row>
         </Section>
