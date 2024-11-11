@@ -1,17 +1,15 @@
 import { createClient } from '@/utils/supabase/server';
 
 let cachedClients = null;
-let clientsCacheExpiry = null;
-
 let cachedContacts = null;
-let contactsCacheExpiry = null;
+
+export function revalidateCache() {
+    cachedClients = null;
+    cachedContacts = null;
+}
 
 export async function getContacts() {
-    const now = new Date();
-
-    // Check if cachedContacts exist and if the cache is still valid
-    if (cachedContacts && contactsCacheExpiry && now < contactsCacheExpiry)
-        return cachedContacts[0];
+    if (cachedContacts) return cachedContacts[0];
 
     const supabase = createClient();
     const { data: contacts, error } = await supabase
@@ -22,18 +20,14 @@ export async function getContacts() {
         throw new Error(error.message);
     }
 
-    // Cache the result and set cache expiry for contacts
     cachedContacts = contacts;
-    contactsCacheExpiry = new Date(now.getTime() + 24 * 60 * 60 * 1000); // Cache for 24 hours
+    console.log('contacts fetched');
 
     return cachedContacts[0];
 }
 
 export async function getClients() {
-    const now = new Date();
-
-    // Check if cachedClients exist and if the cache is still valid
-    if (cachedClients && clientsCacheExpiry && now < clientsCacheExpiry) return cachedClients;
+    if (cachedClients) return cachedClients;
 
     const supabase = createClient();
     const { data: clients, error } = await supabase.from('clients').select('id,name,image');
@@ -42,9 +36,8 @@ export async function getClients() {
         throw new Error(error.message);
     }
 
-    // Cache the result and set cache expiry for clients
     cachedClients = clients;
-    clientsCacheExpiry = new Date(now.getTime() + 24 * 60 * 60 * 1000); // Cache for 24 hours
+    console.log('clients fetched');
 
     return cachedClients;
 }

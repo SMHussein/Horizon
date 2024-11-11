@@ -3,8 +3,10 @@
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { createClient } from '@/utils/supabase/server';
+import { revalidateCache } from './services';
 
 export async function updateContacts(currentState, formData) {
+    revalidateCache();
     const supabase = createClient();
     const phoneNumber1 = formData.get('phoneNumber1');
     const phoneNumber2 = formData.get('phoneNumber2');
@@ -44,6 +46,7 @@ export async function contactUs(currentState, formData) {
 }
 
 export async function createEditClient(currentState, formData) {
+    revalidateCache();
     const supabase = createClient();
     const name = formData.get('name');
     const image = formData.get('image');
@@ -100,6 +103,7 @@ export async function createEditClient(currentState, formData) {
 }
 
 export async function deleteClient(currentState, client) {
+    revalidateCache();
     const supabase = createClient();
     const { id, image } = client;
 
@@ -162,6 +166,7 @@ export async function readMessage(currentState, id) {
 }
 
 export async function archiveClient(currentState, client) {
+    revalidateCache();
     const { id } = client;
     // Step 2: Insert the client data into the archive table
     const { error: insertError } = await supabase.from('archive').insert([client]);
