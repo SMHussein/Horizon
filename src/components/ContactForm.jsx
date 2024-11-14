@@ -6,6 +6,7 @@ import { toast } from 'react-hot-toast';
 import { useFormState } from 'react-dom';
 import { contactUs } from '@utils/actions';
 import { useEffect, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const initialState = {
     message: '',
@@ -40,7 +41,28 @@ function ContactForm({
         if (!name || !email || !phone || !message) return;
 
         formAction(data);
+        sendEmail(name, email, message, phone);
         reset();
+    };
+
+    const sendEmail = async (name, email, message, phone) => {
+        try {
+            const emailParams = {
+                name,
+                phone,
+                email,
+                message,
+            };
+
+            await emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                emailParams,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+            );
+        } catch (error) {
+            console.error('Failed to send message. Please try again later.', error);
+        }
     };
 
     useEffect(() => {
