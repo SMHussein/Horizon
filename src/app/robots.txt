@@ -6,4 +6,4 @@ Disallow: /admin
 User-agent: *
 Allow: /
 
-sitemap:https://horizon-sp.com/sitemap.xml
+sitemap:https://www.horizon-sp.com/sitemap.xml
