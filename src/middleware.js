@@ -1,50 +1,25 @@
-import createIntlMiddleware from 'next-intl/middleware';
-import { createServerClient } from '@supabase/ssr';
-import { NextResponse } from 'next/server';
-import { routing } from './i18n/routing';
+import createMiddleware from "next-intl/middleware";
+import { routing } from "@/src/i18n/routing";
+import { updateSession } from "@/utils/supabase/middleware";
 
-const handleI18nRouting = createIntlMiddleware(routing);
+const handleI18nRouting = createMiddleware(routing);
 
 export async function middleware(request) {
-    const { pathname } = request.nextUrl;
+  const response = handleI18nRouting(request);
 
-    // Skip i18n routing for admin routes
-    if (pathname.startsWith('/admin')) {
-        const supabase = createServerClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY, {
-            cookies: {
-                getAll: () => request.cookies.getAll(),
-                setAll: (cookiesToSet) => {
-                    cookiesToSet.forEach(({ name, value, options }) => {
-                        request.cookies.set(name, value);
-                        response.cookies.set(name, value, options);
-                    });
-                },
-            },
-        });
-
-        const {
-            data: { user },
-        } = await supabase.auth.getUser();
-
-        // If no user, redirect to login page
-        if (!user) {
-            const url = request.nextUrl.clone();
-            url.pathname = '/login';
-            return NextResponse.redirect(url);
-        }
-
-        return NextResponse.next(); // Continue to the /admin page if authenticated
-    }
-
-    // Handle i18n routing for other non-admin paths
-    const response = handleI18nRouting(request);
-
-    // Cache non-admin pages for 1 day
-    response.headers.set('Cache-Control', 'public, max-age=86400, stale-while-revalidate=300');
-
-    return response;
+  // A `response` can now be passed here
+  return await updateSession(request, response);
 }
 
 export const config = {
-    matcher: ['/', '/(en|ar)/:path*'],
+  // Matcher entries are linked with a logical "or", therefore
+  // if one of them matches, the middleware will be invoked.
+  matcher: [
+    // Match all pathnames except for
+    // - … if they start with `/api`, `/_next` or `/_vercel`
+    // - … the ones containing a dot (e.g. `favicon.ico`)
+    "/((?!api|_next|admin|_vercel|.*\\..*).*)",
+    // However, match all pathnames within `/users`, optionally with a locale prefix
+    "/([\\w-]+)?/users/(.+)",
+  ],
 };
