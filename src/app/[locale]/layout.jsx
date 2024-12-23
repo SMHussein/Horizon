@@ -13,6 +13,7 @@ const georgia = localFont({
   src: "../../fonts/georgia.ttf",
   variable: "--font-georgia",
 });
+
 const bahij = localFont({
   src: "../../fonts//Bahij.ttf",
   variable: "--font-bahij",
