@@ -14,19 +14,20 @@ export function getMetadata(locale) {
       title:
         "الافق للامن و الحماية, شركة رائدة في مجال خدمات الأمن والحماية في الأردن",
       description:
-        "الافق للامن و الحماية تقدم حلول أمنية رفيعة المستوى تشمل توفير حراس الأمن، ومراقبة كاميرات وخدمات الإشراف. لتلبية جميع احتياجاتك الأمنية.",
+        "الافق للامن و الحماية تقدم حلول أمنية رفيعة المستوى تشمل توفير حراس الأمن، ومراقبة كاميرات وخدمات الإشراف.",
       alternates: {
-        canonical: "https://www.horizon-sp.com/en",
+        canonical: "https://www.horizon-sp.com",
       },
       author: "الافق للأمن و الحماية",
       keywords:
-        "شركات امن في الأردن , شركات امن وحماية في الاردن , شركة حراسة في الاردن , الافق للامن والحماية, شركات امن وحماية , امن وحماية , شركات امن , شركات حراسة , شركة الامن الأولى في الأردن , شركات دفاع , شركات حراسة اردنية ، شركة الامن الافضل في الاردن ،افضل شركة حراسات امنية في الاردن ",
+        "شركات امن في الأردن , شركات امن وحماية في الاردن , شركة حراسة في الاردن , امن وحماية , شركات امن , شركات حراسة ,  شركات حراسة اردنية ، شركة الامن الافضل في الاردن ،افضل شركة حراسات امنية في الاردن ",
       openGraph: {
         type: "website",
         url: "https://www.horizon-sp.com",
-        title: "الافق للامن و الحماية - خدمات الأمن في عمان، الأردن",
+        title:
+          "الافق للامن و الحماية, شركة رائدة في مجال خدمات الأمن والحماية في الأردن",
         description:
-          "الافق للامن و الحاية - خدمات مثالية لضمان سلامتكم و سلامة منشآتكم من خلال حلول الامن المتخصصة و الحراسة المدربة و مراقبة الكاميرات في عمان، الأردن.",
+          "الافق للامن و الحماية تقدم حلول أمنية رفيعة المستوى تشمل توفير حراس الأمن، ومراقبة كاميرات وخدمات الإشراف.",
       },
       metadataBase: new URL("https://www.horizon-sp.com"), // Add this line
     };
@@ -35,19 +36,20 @@ export function getMetadata(locale) {
     title:
       "Horizon Security - Leading Security & Protection Services in Jordan",
     description:
-      "Horizon Security and Protection is a leading private security company in Jordan, providing tailored security guard services, CCTV monitoring, and consultancy for residential, corporate, and industrial clients. Contact us for the best security solutions in Jordan.",
+      "Horizon Security and Protection is a leading private security company in Jordan, providing tailored security guard services, CCTV monitoring, and all related security services",
     alternates: {
-      canonical: "https://www.horizon-sp.com/en",
+      canonical: "https://www.horizon-sp.com",
     },
     author: "Horizon Security & Protection",
     keywords:
-      "security services, Site Security and protection,Security Consultancy, security guards, CCTV monitoring, supervision, facilities management, security manpower, Horizon Security, Security companies in Jordan, security and protection companies in Jordan, Horizon for Security and Protection, public security, security companies, the best sercurity services company, best security company in Jordan, security training",
+      "security services, Site Security and protection,Security Consultancy, security guards, CCTV monitoring, supervision, facilities management, security manpower, Security companies in Jordan, security and protection companies in Jordan, public security, best security company in Jordan",
     openGraph: {
       type: "website",
       url: "https://www.horizon-sp.com",
-      title: "Horizon - Premier Security Services in Amman, Jordan",
+      title:
+        "Horizon Security - Leading Security & Protection Services in Jordan",
       description:
-        "Horizon offers comprehensive security services, including trained security guards, CCTV monitoring, and supervision in Amman, Jordan. We ensure your safety with expert facility management and security manpower solutions.",
+        "Horizon Security and Protection is a leading private security company in Jordan, providing tailored security guard services, CCTV monitoring, and all related security services",
     },
     metadataBase: new URL("https://www.horizon-sp.com"), // Add this line
   };
