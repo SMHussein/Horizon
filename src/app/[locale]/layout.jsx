@@ -8,7 +8,7 @@ import { routing } from "@src/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const georgia = localFont({
   src: "../../fonts/georgia.ttf",
@@ -38,7 +38,9 @@ async function RootLayout({ children, params: { locale } }) {
   } text-accent-150`;
   return (
     <html lang={locale} dir={direction} className="scroll-smooth">
-      <GoogleTagManager gtmId="G-XZNT2WEPXR" />
+      <GoogleAnalytics gtmId="G-XZNT2WEPXR" />
+      <GoogleTagManager gtmId="GTM-PZ52G6KQ" />
+
       <body className={bodyClasses}>
         <Toaster
           position="top-center"
