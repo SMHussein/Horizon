@@ -18,7 +18,7 @@ async function Footer({ contacts }) {
 
   return (
     <footer ref={ref} className={footerClasses}>
-      <Row classes="py-12 sm:py-20">
+      <Row classes="py-12 ">
         <div className="flex items-start lg:justify-around flex-wrap flex-col lg:flex-row gap-8 lg:gap-4">
           <FooterItem
             alt="location"

@@ -16,7 +16,7 @@ export function getMetadata(locale) {
       description:
         "الافق للامن و الحماية تقدم حلول أمنية رفيعة المستوى تشمل توفير حراس الأمن، ومراقبة كاميرات وخدمات الإشراف.",
       alternates: {
-        canonical: "https://www.horizon-sp.com",
+        canonical: "https://www.horizon-sp.com/ar",
       },
       author: "الافق للأمن و الحماية",
       keywords:
@@ -36,7 +36,7 @@ export function getMetadata(locale) {
     title:
       "Horizon Security - Leading Security & Protection Services in Jordan",
     description:
-      "Horizon Security and Protection is a leading private security company in Jordan, providing tailored security guard services, CCTV monitoring, and all related security services",
+      "Horizon is a leading security and protection company in Jordan, providing security guard services, CCTV monitoring, and all related security services",
     alternates: {
       canonical: "https://www.horizon-sp.com",
     },
