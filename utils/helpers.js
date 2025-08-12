@@ -29,7 +29,12 @@ export function getMetadata(locale) {
         description:
           "الافق للامن و الحماية تقدم حلول أمنية رفيعة المستوى تشمل توفير حراس الأمن، ومراقبة كاميرات وخدمات الإشراف.",
       },
-      metadataBase: new URL("https://www.horizon-sp.com"), // Add this line
+      metadataBase: new URL("https://www.horizon-sp.com"),
+      icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico",
+        apple: "/favicon.ico",
+      },
     };
   }
   return {
@@ -51,6 +56,11 @@ export function getMetadata(locale) {
       description:
         "Horizon Security and Protection is a leading private security company in Jordan, providing tailored security guard services, CCTV monitoring, and all related security services",
     },
-    metadataBase: new URL("https://www.horizon-sp.com"), // Add this line
+    metadataBase: new URL("https://www.horizon-sp.com"),
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/favicon.ico",
+    },
   };
 }

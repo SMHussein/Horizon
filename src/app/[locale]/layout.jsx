@@ -38,6 +38,11 @@ async function RootLayout({ children, params: { locale } }) {
   } text-accent-150`;
   return (
     <html lang={locale} dir={direction} className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      </head>
       <GoogleAnalytics gtmId="G-XZNT2WEPXR" />
       <GoogleTagManager gtmId="GTM-PZ52G6KQ" />
 
