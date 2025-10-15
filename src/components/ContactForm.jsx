@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { useForm } from "react-hook-form";
-import Button from "./Button";
-import { toast } from "react-hot-toast";
-import { useFormState } from "react-dom";
-import { contactUs } from "@utils/actions";
-import { useEffect, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useForm } from 'react-hook-form';
+import Button from './Button';
+import { toast } from 'react-hot-toast';
+import { useFormState } from 'react-dom';
+import { contactUs } from '@utils/actions';
+import { useEffect, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const initialState = {
-  message: "",
-  error: "",
-  id: "",
+  message: '',
+  error: '',
+  id: '',
 };
 
 function ContactForm({
@@ -61,7 +61,7 @@ function ContactForm({
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
     } catch (error) {
-      console.error("Failed to send message. Please try again later.", error);
+      console.error('Failed to send message. Please try again later.', error);
     }
   };
 
@@ -80,11 +80,16 @@ function ContactForm({
         <label htmlFor="name">{name}</label>
         <input
           id="name"
-          {...register("name", { required: true })}
+          autocomplete="name"
+          {...register('name', { required: true })}
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          aria-invalid={errors.name ? 'true' : 'false'}
+          aria-errormessage="name-error"
         />
         {errors.name && (
-          <span className="text-red-500 text-sm">{requiredValidation}</span>
+          <span id="name-error" className="text-red-500 text-sm">
+            {requiredValidation}
+          </span>
         )}
       </div>
       <div>
@@ -92,7 +97,8 @@ function ContactForm({
         <input
           id="phone"
           type="number"
-          {...register("phone", {
+          autocomplete="tel"
+          {...register('phone', {
             required: phoneValidation,
             minLength: {
               value: 9,
@@ -100,17 +106,22 @@ function ContactForm({
             },
           })}
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          aria-invalid={errors.phone ? 'true' : 'false'}
+          aria-errormessage="phone-error"
         />
         {errors.phone && (
-          <span className="text-red-500 text-sm">{errors.phone.message}</span>
+          <span id="phone-error" className="text-red-500 text-sm">
+            {errors.phone.message}
+          </span>
         )}
       </div>
 
       <div>
         <label htmlFor="email">{email}</label>
         <input
+          autocomplete="email"
           id="email"
-          {...register("email", {
+          {...register('email', {
             required: requiredValidation,
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
@@ -118,21 +129,30 @@ function ContactForm({
             },
           })}
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          aria-invalid={errors.email ? 'true' : 'false'}
+          aria-errormessage="email-error"
         />
         {errors.email && (
-          <span className="text-red-500 text-sm">{errors.email.message}</span>
+          <span id="email-error" className="text-red-500 text-sm">
+            {errors.email.message}
+          </span>
         )}
       </div>
       <div>
         <label htmlFor="message">{message}</label>
         <textarea
+          autocomplete="off"
           rows={10}
           id="message"
-          {...register("message", { required: true })}
+          {...register('message', { required: true })}
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          aria-invalid={errors.message ? 'true' : 'false'}
+          aria-errormessage="message-error"
         ></textarea>
         {errors.message && (
-          <span className="text-red-500 text-sm">{requiredValidation}</span>
+          <span id="message-error" className="text-red-500 text-sm">
+            {requiredValidation}
+          </span>
         )}
       </div>
       <div>

@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { login } from "@utils/actions";
-import { useFormState } from "react-dom";
-import { toast } from "react-hot-toast";
-import Image from "next/image";
-import Button from "@src/components/Button";
+import { login } from '@utils/actions';
+import { useFormState } from 'react-dom';
+import { toast } from 'react-hot-toast';
+import Image from 'next/image';
+import Button from '@src/components/Button';
 
 const initialState = {
-  success: "",
-  error: "",
+  success: '',
+  error: '',
 };
 
 export default function LoginForm() {
@@ -26,7 +26,7 @@ export default function LoginForm() {
             src="/assets/icons/logo-orange.svg"
             width={50}
             height={50}
-            alt="logo"
+            alt="horizon logo"
           />
         </div>
 

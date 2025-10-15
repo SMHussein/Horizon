@@ -1,13 +1,13 @@
-import Heading from "@src/components/Heading";
-import Row from "@src/components/Row";
-import Section from "@src/components/Section";
-import ServicesCards from "@src/components/ServicesCards";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Logo from "@public/assets/icons/logo-orange.svg";
+import Heading from '@src/components/Heading';
+import Row from '@src/components/Row';
+import Section from '@src/components/Section';
+import ServicesCards from '@src/components/ServicesCards';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import Logo from '@public/assets/icons/logo-orange.svg';
 
 function Services() {
-  const t = useTranslations("OurServices");
+  const t = useTranslations('OurServices');
 
   return (
     <Section
@@ -17,46 +17,46 @@ function Services() {
     >
       <Row classes="py-12 ">
         <Heading type={2} classes="mb-12 text-center">
-          {t("title")}
+          {t('title')}
         </Heading>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
           <ServicesCards
-            title={t("securityEquipment.title")}
-            text={t("securityEquipment.text")}
+            title={t('securityEquipment.title')}
+            text={t('securityEquipment.text')}
           />
           <ServicesCards
-            title={t("siteSecurity.title")}
-            text={t("siteSecurity.text")}
+            title={t('siteSecurity.title')}
+            text={t('siteSecurity.text')}
           />
           <ServicesCards
-            title={t("armedUnarmed.title")}
-            text={t("armedUnarmed.text")}
+            title={t('armedUnarmed.title')}
+            text={t('armedUnarmed.text')}
           />
           <ServicesCards
-            title={t("securityPlan.title")}
-            text={t("securityPlan.text")}
+            title={t('securityPlan.title')}
+            text={t('securityPlan.text')}
           />
           <ServicesCards
-            title={t("securityConsultancy.title")}
-            text={t("securityConsultancy.text")}
+            title={t('securityConsultancy.title')}
+            text={t('securityConsultancy.text')}
           />
           <ServicesCards
-            title={t("securityTechnology.title")}
-            text={t("securityTechnology.text")}
+            title={t('securityTechnology.title')}
+            text={t('securityTechnology.text')}
           />
           <ServicesCards
-            title={t("securityQualified.title")}
-            text={t("securityQualified.text")}
+            title={t('securityQualified.title')}
+            text={t('securityQualified.text')}
           />
           <ServicesCards
-            title={t("securityControl.title")}
-            text={t("securityControl.text")}
+            title={t('securityControl.title')}
+            text={t('securityControl.text')}
           />
           <Image
             src={Logo}
             width={109}
             height={125}
-            alt="logo"
+            alt="horizon logo"
             className="justify-self-center sm:col-span-2 lg:col-span-1"
           />
         </div>
