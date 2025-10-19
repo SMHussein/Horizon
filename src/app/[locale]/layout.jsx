@@ -43,7 +43,7 @@ async function RootLayout({ children, params: { locale } }) {
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </head>
-      <GoogleAnalytics gtmId="G-9NN72VMK7X" />
+      <GoogleAnalytics gaId="G-9NN72VMK7X" />
       <GoogleTagManager gtmId="GTM-PZ52G6KQ" />
       <body className={bodyClasses}>
         <Toaster
