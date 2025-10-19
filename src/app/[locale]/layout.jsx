@@ -39,13 +39,12 @@ async function RootLayout({ children, params: { locale } }) {
   return (
     <html lang={locale} dir={direction} className="scroll-smooth">
       <head>
-        <GoogleAnalytics gtmId="G-9NN72VMK7X" />
-        <GoogleTagManager gtmId="GTM-PZ52G6KQ" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </head>
-
+      <GoogleAnalytics gtmId="G-9NN72VMK7X" />
+      <GoogleTagManager gtmId="GTM-PZ52G6KQ" />
       <body className={bodyClasses}>
         <Toaster
           position="top-center"
