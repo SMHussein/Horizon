@@ -1,23 +1,23 @@
-import "@styles/globals.css";
-import localFont from "next/font/local";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import { getMetadata } from "@utils/helpers";
-import { Toaster } from "react-hot-toast";
-import { routing } from "@src/i18n/routing";
-import { setRequestLocale } from "next-intl/server";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import '@styles/globals.css';
+import localFont from 'next/font/local';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { getMetadata } from '@utils/helpers';
+import { Toaster } from 'react-hot-toast';
+import { routing } from '@src/i18n/routing';
+import { setRequestLocale } from 'next-intl/server';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 
 const georgia = localFont({
-  src: "../../fonts/georgia.ttf",
-  variable: "--font-georgia",
+  src: '../../fonts/georgia.ttf',
+  variable: '--font-georgia',
 });
 
 const bahij = localFont({
-  src: "../../fonts//Bahij.ttf",
-  variable: "--font-bahij",
+  src: '../../fonts//Bahij.ttf',
+  variable: '--font-bahij',
 });
 
 export function generateStaticParams() {
@@ -32,25 +32,25 @@ async function RootLayout({ children, params: { locale } }) {
   setRequestLocale(locale);
 
   const messages = await getMessages();
-  const direction = locale === "ar" ? "rtl" : "";
+  const direction = locale === 'ar' ? 'rtl' : '';
   const bodyClasses = `${
-    locale === "ar" ? bahij.className : georgia.className
+    locale === 'ar' ? bahij.className : georgia.className
   } text-accent-150`;
   return (
     <html lang={locale} dir={direction} className="scroll-smooth">
       <head>
+        <GoogleAnalytics gtmId="G-9NN72VMK7X" />
+        <GoogleTagManager gtmId="GTM-PZ52G6KQ" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </head>
-      <GoogleAnalytics gtmId="G-XZNT2WEPXR" />
-      <GoogleTagManager gtmId="GTM-PZ52G6KQ" />
 
       <body className={bodyClasses}>
         <Toaster
           position="top-center"
           gutter={12}
-          containerStyle={{ margin: "8px" }}
+          containerStyle={{ margin: '8px' }}
           toastOptions={{
             success: {
               duration: 5000,
@@ -59,13 +59,13 @@ async function RootLayout({ children, params: { locale } }) {
               duration: 5000,
             },
             style: {
-              fontSize: "16px",
-              maxWidth: "500px",
-              padding: "16px 24px",
-              backgroundColor: "white",
-              color: "color-grey-700",
-              textAlign: "center",
-              lineHeight: "1.5",
+              fontSize: '16px',
+              maxWidth: '500px',
+              padding: '16px 24px',
+              backgroundColor: 'white',
+              color: 'color-grey-700',
+              textAlign: 'center',
+              lineHeight: '1.5',
             },
           }}
         />
